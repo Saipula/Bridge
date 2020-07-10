@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.207,C:\Users\Персик\Documents\Курсачи\Бридж\main.h=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.164,=C:\Users\Персик\Documents\Курсачи\Бридж\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.257,=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.742,=C:\Users\Персик\Documents\Курсачи\Бридж\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.182,C:\Users\Персик\Documents\Курсачи\Бридж\Project1PCH1.h=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.187,C:\Users\Персик\Documents\Курсачи\Бридж\Unit2.h=C:\Users\Персик\Documents\Курсачи\Бридж\suit.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.187,C:\Users\Персик\Documents\Курсачи\Бридж\Unit2.cpp=C:\Users\Персик\Documents\Курсачи\Бридж\suit.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.540,C:\Users\Персик\Documents\Курсачи\Бридж\BridgePCH1.h=C:\Users\Персик\Documents\Курсачи\Бридж\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.628,C:\Users\Персик\Documents\Курсачи\Бридж\Bridge.cbproj=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.386,C:\Users\Персик\Documents\Курсачи\Бридж\MyClasses.h=C:\Users\Персик\Documents\Курсачи\Бридж\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.187,C:\Users\Персик\Documents\Курсачи\Бридж\Unit2.dfm=C:\Users\Персик\Documents\Курсачи\Бридж\suit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.377,=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.386,C:\Users\Персик\Documents\Курсачи\Бридж\MyClasses.cpp=C:\Users\Персик\Documents\Курсачи\Бридж\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.207,C:\Users\Персик\Documents\Курсачи\Бридж\main.dfm=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.207,C:\Users\Персик\Documents\Курсачи\Бридж\main.cpp=C:\Users\Персик\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
