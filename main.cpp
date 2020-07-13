@@ -15,19 +15,13 @@ Game *game;
 // ---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
 	srand(time(NULL));
-	game = new Game(ImageList, this->Canvas);
-}
-
-// ---------------------------------------------------------------------------
-void __fastcall TForm1::FormPaint(TObject *Sender) {
-	game->show();
+	game = new Game(ImageList, this->Canvas, Image1->Picture);
 }
 
 // ---------------------------------------------------------------------------
 void __fastcall TForm1::RestClick(TObject *Sender) {
 	game->cleer();
-	game = new Game(ImageList, this->Canvas);
-	game->show();
+	game = new Game(ImageList, this->Canvas, Image1->Picture);
 	Timer1->Enabled = true;
 }
 
@@ -60,3 +54,4 @@ void __fastcall TForm1::Timer1Timer(TObject *Sender) {
 	game->Hod();
 }
 // ---------------------------------------------------------------------------
+

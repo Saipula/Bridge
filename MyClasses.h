@@ -71,8 +71,6 @@ public:
 	Carta Click(Carta *carta, TPoint click);
 	// Проверка есть ли чем ходить
 	short proverka(Carta *carta);
-	// Очистка места после удаления карты
-	void clear();
 };
 
 class Bot : public Player {
@@ -87,6 +85,7 @@ public:
 
 class Game {
 	TPicture *cartFon; // Рубашка карт
+	TPicture *Desk; // Стол
 	Carta *carts[36]; // Ящик с картами
 	Carta cartNaStole; // Карта на столе
 	TCanvas *device; // Полотно на котором рисуется всё
@@ -97,12 +96,12 @@ class Game {
 	Bot *bot;
 
 	void rand_cart(); // Перемешивание карт в колоде
+	void show(); // Отображение карт
 
 public:
 	bool End;
 
-	Game(TImageList *list, TCanvas *canv);
-	void show(); // Отображение карт
+	Game(TImageList *list, TCanvas *canv, TPicture *desktop);
 	void click(TPoint click); // Нажатие на карту
 	bool Win(short i);
 	void Hod(); // Ход противника

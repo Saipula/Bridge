@@ -11,6 +11,7 @@
 #include <Vcl.ImgList.hpp>
 #include <Vcl.Menus.hpp>
 #include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.jpeg.hpp>
 
 // ---------------------------------------------------------------------------
 class TForm1 : public TForm {
@@ -19,8 +20,7 @@ __published: // IDE-managed Components
 	TMenuItem *Rest;
 	TTimer *Timer1;
 	TImageList *ImageList;
-
-	void __fastcall FormPaint(TObject *Sender);
+	TImage *Image1;
 	void __fastcall RestClick(TObject *Sender);
 	void __fastcall FormMouseDown(TObject *Sender, TMouseButton Button,
 		TShiftState Shift, int X, int Y);

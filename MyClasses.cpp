@@ -6,7 +6,9 @@
 // ---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-Game::Game(TImageList *list, TCanvas *canv) {
+Game::Game(TImageList *list, TCanvas *canv, TPicture *desktop) {
+	Desk = desktop;
+
 	device = canv;
 	imgW = list->Width;
 	imgH = list->Height;
@@ -16,8 +18,8 @@ Game::Game(TImageList *list, TCanvas *canv) {
 	cartFon = new TPicture();
 	list->GetBitmap(36, cartFon->Bitmap);
 
-	pl1 = new Player(device, TPoint(100, 300), imgW, imgH, cartFon);
-	bot = new Bot(device, TPoint(100, 0), imgW, imgH, cartFon);
+	pl1 = new Player(device, TPoint(0, 275), imgW, imgH, cartFon);
+	bot = new Bot(device, TPoint(0, 0), imgW, imgH, cartFon);
 
 	SUIT suit[4] = {DIAMONDS, HEARTS, CLUBS, SPADES};
 
@@ -42,6 +44,8 @@ Game::Game(TImageList *list, TCanvas *canv) {
 	IterCart++;
 
 	End = false;
+
+    show();
 }
 
 void Game::rand_cart() {
@@ -50,17 +54,14 @@ void Game::rand_cart() {
 }
 
 void Game::show() {
+	device->Draw(0, 0, Desk->Graphic);
+
 	pl1->draw();
 	bot->draw();
-	device->Draw(550, 130, cartNaStole.cartImg->Graphic);
+	device->Draw(450, 130, cartNaStole.cartImg->Graphic);
 
 	if (IterCart < 36)
-		device->Draw(650, 130, cartFon->Graphic);
-	else {
-		device->Pen->Color = clBtnFace;
-		device->Brush->Color = clBtnFace;
-		device->Rectangle(650, 130, imgW, imgH);
-	}
+		device->Draw(550, 130, cartFon->Graphic);
 }
 
 void Game::click(TPoint click) {
@@ -233,15 +234,13 @@ void Game::Hod() {
 }
 
 void Game::cleer() {
-	bot->clear();
-	pl1->clear();
+	device->Draw(0, 0, Desk->Graphic);
 }
 
 Carta Bot::hod(Carta *carta) {
 	for (int i = 0; i < carts.size(); i++) {
 		if ((carts[i]->Suit == carta->Suit) ||
 			(carts[i]->Value == carta->Value)) {
-			clear();
 			Carta *tmp = new Carta(carts[i]);
 			carts.erase(carts.begin() + i);
 			return tmp;
@@ -285,7 +284,6 @@ Carta Player::Click(Carta *carta, TPoint click) {
 		if (i == (click.x - Start->x) / imgW) {
 			if ((carts[i]->Suit == carta->Suit) ||
 				(carts[i]->Value == carta->Value)) {
-				clear();
 				Carta *tmp = new Carta(carts[i]);
 				carts.erase(carts.begin() + i);
 				return tmp;
@@ -293,13 +291,6 @@ Carta Player::Click(Carta *carta, TPoint click) {
 		}
 	}
 	return carta;
-}
-
-void Player::clear() {
-	device->Pen->Color = clBtnFace;
-	device->Brush->Color = clBtnFace;
-	device->Rectangle(Start->x, Start->y, Start->x * carts.size() * imgW,
-		Start->y + imgH);
 }
 
 short Player::proverka(Carta *carta) {
